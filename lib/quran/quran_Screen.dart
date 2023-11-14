@@ -20,7 +20,11 @@ class _QuranScreenState extends State<QuranScreen> {
     var args = ModalRoute.of(context)?.settings.arguments as QuranArguments;
     if (quran.isEmpty) quranContent(args.index);
     return Stack(children: [
-      Image.asset('assets/images/main_background_light.png'),
+      Image.asset(
+        'assets/images/main_background_light.png',
+        height: double.infinity,
+        fit: BoxFit.fill,
+      ),
       Scaffold(
         appBar: AppBar(
           title: Text(
